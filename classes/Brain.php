@@ -30,5 +30,20 @@ class Brain //extends People
         else
         $ex_elvator->setFloor($floor);
     }
+
+    //Проверка на ввод в консоли натурального числа
+    public function checkNumberIsInt($message)
+    {
+        do
+        {
+            echo $message;
+            $number = trim(fgets(STDIN));
+            if(!preg_match("/^[0-9]{1}$/",$number))
+            $this->print_error("Введите натуральное число!");
+            var_dump(preg_match("/^[0-9]{1}$/",$number));
+        }
+        while(preg_match("/^[0-9]{1}$/",$number)==false);
+        return $number;
+    }
 }
 

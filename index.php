@@ -21,20 +21,11 @@ class Application{
         {
             echo $colors->getColoredString("Сейчас лифт находиться на ".$ex_elevator->getFloor()." этаже.В лифте ".$ex_people->get_people()." человек(а).","white","green"). PHP_EOL;
 
-            do
-            {
-                echo "Введите количество людей, которые заходят в лифт:";
-                $push = trim(fgets(STDIN));
-                if(!preg_match("/^[0-9]{1}$/",$push))
-                $ex_brain ->print_error("введите натуральное целое число!");
-                var_dump(preg_match("/^[0-9]{1}$/",$push));
-            }
-            while(preg_match("/^[0-9]{1}$/",$push)==false);
+            $push =$ex_brain->checkNumberIsInt("Введите количество людей, которые заходят в лифт:");
 
-            echo "Введите количество людей, которые выходят из лифта:";
-            $pop = trim(fgets(STDIN));
-            echo "Введите требумый этаж:";
-            $to_floor = trim(fgets(STDIN));
+            $pop =$ex_brain->checkNumberIsInt("Введите количество людей, которые выходят из лифта:");
+
+            $to_floor =$ex_brain->checkNumberIsInt("Введите требумый этаж:");
 
             $ex_people->push($push);
             $ex_people->pop($pop);
