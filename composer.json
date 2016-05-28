@@ -1,0 +1,15 @@
+{
+  "name":"popova/bsa_task1_popova",
+  "description":"Files for the first task",
+  "minimum_stability":"stable",
+  "license":"proprietary",
+  "authors":[
+    {
+      "name":"Lyudmila",
+      "email":"tobeinword1987@gmail.com"
+    }
+  ],
+  "autoload-dev":{
+    "classmap":["./"]
+  }
+}
