@@ -39,8 +39,8 @@ class Brain //extends People
             echo $message;
             $number = trim(fgets(STDIN));
             if(!preg_match("/^[0-9]{1}$/",$number))
-            $this->print_error("Введите натуральное число!");
-            var_dump(preg_match("/^[0-9]{1}$/",$number));
+            $this->print_error("Введите натуральное число до 10!");
+//            var_dump(preg_match("/^[0-9]{1}$/",$number));
         }
         while(preg_match("/^[0-9]{1}$/",$number)==false);
         return $number;
