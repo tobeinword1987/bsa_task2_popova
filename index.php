@@ -32,7 +32,7 @@ class Application{
             $ex_brain->checkPeople($ex_elevator, $ex_people, $to_floor);
 
             echo $colors->getColoredString("Сейчас лифт находиться на ".$ex_elevator->getFloor()." этаже.В лифте ".$ex_people->get_people()." человек(а).","white","green"). PHP_EOL;
-            echo "Вы хотите уравлять лифтом? (Y/N): ";
+            echo "Вы хотите управлять лифтом? (Y/N): ";
             $line = trim(fgets(STDIN));
             echo "******************************************************".PHP_EOL;
         }
