@@ -8,7 +8,7 @@
  */
 class People
 {
-    private $stack;
+    private $stack;//Стек, который управляет загрузкой и выгрузкой людей из лифта
     const limit=4;
 
     public function __construct()
@@ -16,12 +16,13 @@ class People
         $this->stack=array();
     }
     
+    //Получить количество людей в лифте
     public function get_people()
     {
         return count($this->stack);
     }
 
-
+    //Загрузить людей
     public function push($count_people)
     {
         for ($i=0;$i<$count_people;$i++)
@@ -32,12 +33,17 @@ class People
         return $this->stack;
     }
 
+    //Выгрузить людей
     public function pop($count_people)
     {
-        for ($i=0;$i<$count_people;$i++)
+            for ($i=0;$i<$count_people;$i++)
         {
             array_shift($this->stack);
         }
         return $this->stack;
+    }
+
+    public function isEmpty() {
+        return empty($this->stack);
     }
 }

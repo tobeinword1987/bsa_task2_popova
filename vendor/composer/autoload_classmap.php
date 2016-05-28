@@ -6,11 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Application' => $baseDir . '/index.php',
-    'Brain' => $baseDir . '/Brain.php',
-    'ComposerAutoloaderInite4464efd56a4bcc52b73d45a84a179f7' => $vendorDir . '/composer/autoload_real.php',
-    'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
-    'Composer\\Autoload\\ComposerStaticInite4464efd56a4bcc52b73d45a84a179f7' => $vendorDir . '/composer/autoload_static.php',
-    'Elevator' => $baseDir . '/Elevator.php',
-    'People' => $baseDir . '/People.php',
+    'Brain' => $baseDir . '/classes/Brain.php',
+    'Colors' => $baseDir . '/classes/Colors.php',
+    'Elevator' => $baseDir . '/classes/Elevator.php',
+    'People' => $baseDir . '/classes/People.php',
 );
